@@ -14,6 +14,8 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
 </head>
 <body>
     <form runat="server">
@@ -38,13 +40,14 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+            <div class="container" >
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+
                     <a class="navbar-brand" runat="server" href="~/">Toy</a>
                 </div>
                 <div class="navbar-collapse collapse">
@@ -74,7 +77,10 @@
                 </div>
             </div>
         </div>
-        <div id="Titlecontent" style="text-align:center"><br /><br />
+      
+        
+        <br /><br />
+        <div id="Titlecontent" style="text-align:center">
             <a runat="server" href="~/">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" BorderStyle="None" />
             </a>

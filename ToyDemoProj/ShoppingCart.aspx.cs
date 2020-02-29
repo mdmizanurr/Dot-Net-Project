@@ -23,17 +23,14 @@ namespace ToyDemoProj
                 decimal cartTotal = 0;
                 cartTotal = userShoppingCart.GetTotal();
                 if (cartTotal > 0)
-                {
-                    // Display Total
-                    lblTotal.Text = String.Format("{0:c}", cartTotal);
-
+                {                    
+                    lblTotal.Text = String.Format($"{cartTotal}");
                 }
-
                 else
                 {
                     LabelTotalText.Text = "";
                     lblTotal.Text = "";
-                    ShoppingCartTitle.InnerText = "Shopping Cart is empty";
+                    ShoppingCartTitle.InnerText = "Shopping Cart is empty ";
                 }
             }
 
@@ -42,11 +39,8 @@ namespace ToyDemoProj
         public List<CartItem> GetShoppingCartItems()
         {
             ShoppingCartActions actions = new ShoppingCartActions();
-
             return actions.GetCartItems();
         }
-
-        
 
         public List<CartItem> UpdateCartItems()
         {
@@ -76,7 +70,7 @@ namespace ToyDemoProj
 
                 usersShoppingCart.UpdateShoppingCartDatabase(CartId, cartUpdates);
                 CartList.DataBind();
-                lblTotal.Text = String.Format("{0:c}", usersShoppingCart.GetTotal());
+                lblTotal.Text = String.Format($"{ usersShoppingCart.GetTotal() }");
                 return usersShoppingCart.GetCartItems();
 
             }
@@ -102,11 +96,6 @@ namespace ToyDemoProj
         }
 
 
-
-
-       
-
-
         protected void CheckoutBtn_Click(object sender, ImageClickEventArgs e)
         {
             using (ShoppingCartActions usersShoppingCart = new ShoppingCartActions())
@@ -127,7 +116,7 @@ namespace ToyDemoProj
                 if (cartTotal > 0)
                 {
                     // Display Total.
-                    lblTotal.Text = String.Format("{0:c}", cartTotal);
+                    lblTotal.Text = String.Format($"{ cartTotal }");
                 }
                 else
                 {
