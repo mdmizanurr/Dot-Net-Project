@@ -74,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div id="Titlecontent" style="text-align:center">
+        <div id="Titlecontent" style="text-align:center"><br /><br />
             <a runat="server" href="~/">
                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.jpg" BorderStyle="None" />
             </a>
